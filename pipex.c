@@ -6,11 +6,11 @@
 /*   By: aadamik <aadamik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 18:08:41 by aadamik           #+#    #+#             */
-/*   Updated: 2024/06/27 16:33:51 by aadamik          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:46:18 by aadamik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "pipex.h"
+#include "pipex.h"
 
 void	error(void)
 {
@@ -90,60 +90,3 @@ int	main(int argc, char **argv, char **envp)
 		ft_putstr_fd("Error: wrong number of arguments\n", 2);
 	return (0);
 }
-
-// int	main(int argc, char **argv, char **envp)
-// {
-//     int		fd[2];
-//     pid_t	pid1, pid2;
-//     int		i;
-
-//     i = 0;
-//     if (argc == 5)
-//     {
-//         if (pipe(fd) == -1)
-//             error();
-//         while (i < 2)
-//         {
-//             if (i == 0)
-//             {
-// 				pid1 = fork();
-//                 if (pid1 == -1)
-//                     ft_putstr_fd("Error: fork failed\n", 2);
-//                 if (pid1 == 0)
-//                 {
-// 					printf("1\n");
-//                     child_process(argv, envp, fd);
-//                 }
-// 				else
-// 				{
-// 					printf("parent1\n");
-// 				}
-//             }
-//             else if (i == 1)
-//             {
-//                 pid2 = fork();
-//                 if (pid2 == -1)
-//                     ft_putstr_fd("Error: fork failed\n", 2);
-//                 if (pid2 == 0)
-//                 {
-// 					printf("2\n");
-//                     parent_process(argv, envp, fd);
-// 					exit(0);
-//                 }
-// 				else
-// 				{
-// 					printf("parent2\n");
-// 				}
-//             }
-//             i++;
-//         }
-//     }
-//     else
-//     {
-//         ft_putstr_fd("Error: wrong number of arguments\n", 2);
-//     }
-// 	waitpid(pid1, NULL, 0); // Wait for the first child
-//     waitpid(pid2, NULL, 0); // Wait for the second child
-// 	printf("3\n");
-//     return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: aadamik <aadamik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:39:24 by aadamik           #+#    #+#             */
-/*   Updated: 2024/04/05 19:09:29 by aadamik          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:45:32 by aadamik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char *s, int start, int len)
 {
-	int	i;
+	int		i;
 	char	*ss;
 
 	if (s == NULL)
